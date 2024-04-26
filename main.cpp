@@ -15,7 +15,7 @@ int Recursive(int t,int h) {
 int main() {
 	//時給
 	int hourlyWage = 100;
-	int hourlyWage2 = 1072;
+	int normalHourlyWage = 1072;
 
 	//時間
 	int time = 8;
@@ -26,7 +26,7 @@ int main() {
 
 	//関数を用いて計算
 	result = Recursive(time, hourlyWage);
-	result2 = hourlyWage2 * time;
+	result2 = normalHourlyWage * time;
 
 	printf("再帰的な賃金体系 : %d\n", result);
 	printf("一般的な賃金体系 : %d\n",  result2);
