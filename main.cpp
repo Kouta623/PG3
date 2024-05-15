@@ -18,7 +18,7 @@ void setTimeout(PFunc result, int second) {
 
 	result(&second);
 }
-int main(void) {
+int main() {
 
 	//時間を取得
 	unsigned int currentime = (unsigned int)time(nullptr);
@@ -26,13 +26,10 @@ int main(void) {
 	//乱数の初期化
 	int randomNumber = rand();
 
-	PFunc result;
-	result = DispResult;
+	PFunc dispResult;
+	dispResult = DispResult;
 	int num;
-
-
-
-
+	
 	printf("半(奇数)だったら1，丁(偶然)だったら2を入力\n");
 	scanf_s("%d", &num);
 	while (num != 1 && num != 2)
@@ -43,17 +40,24 @@ int main(void) {
 	//乱数に1～6を代入
 	randomNumber = rand() % 6 + 1;
 	printf("サイコロの目は%d\n", randomNumber);
-	setTimeout(result, 3000);
+	setTimeout(dispResult, 3000);
 
-	if ((randomNumber % 2 == 1 && num == 1) || (randomNumber % 2 == 0 && num == 2)) {
-		printf("正解");
-	}
-	
-	else
-	{
-		printf("不正解");
-	}
+	auto result = [=]() {
+
+
+		if ((randomNumber % 2 == 1 && num == 1) || (randomNumber % 2 == 0 && num == 2)) {
+			printf("正解");
+		}
+
+		else
+		{
+			printf("不正解");
+		}
+
+		};
+
+	result();
 
 	return 0;
-
+	
 }
