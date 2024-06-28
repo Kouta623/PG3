@@ -127,15 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Car.cpp" />
+    <ClCompile Include="IShap.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="PoliceCar.cpp" />
-    <ClCompile Include="RaceCar.cpp" />
+    <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="Rectangle.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Car.h" />
-    <ClInclude Include="PoliceCar.h" />
-    <ClInclude Include="RaceCar.h" />
+    <ClInclude Include="IShap.h" />
+    <ClInclude Include="Circle.h" />
+    <ClInclude Include="Rectangle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
