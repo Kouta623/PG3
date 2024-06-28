@@ -4,7 +4,7 @@ class Car
 public:
 	Car();
 	virtual ~Car();
-	virtual void driving();
+	virtual void driving() = 0;
 protected:
 	const char* name;
 };
